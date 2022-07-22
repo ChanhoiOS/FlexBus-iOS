@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainView" customModule="BestBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-ML-njO">
+                                <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="threeLine" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-fJ-8qj">
+                                        <rect key="frame" x="16" y="12" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="XBe-qr-xIP"/>
+                                            <constraint firstAttribute="width" constant="36" id="zPL-Te-Knz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="버스 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5b-An-nmc">
+                                        <rect key="frame" x="68" y="13" width="259" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="0wc-bR-JzZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.19762819808050497" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="O5b-An-nmc" firstAttribute="leading" secondItem="ejQ-fJ-8qj" secondAttribute="trailing" constant="16" id="2G5-n8-2Wx"/>
+                                    <constraint firstAttribute="trailing" secondItem="O5b-An-nmc" secondAttribute="trailing" constant="48" id="H91-3Z-4bn"/>
+                                    <constraint firstAttribute="height" constant="60" id="Hm6-qr-Gr6"/>
+                                    <constraint firstItem="ejQ-fJ-8qj" firstAttribute="centerY" secondItem="8DW-ML-njO" secondAttribute="centerY" id="Yx6-Ps-8UX"/>
+                                    <constraint firstItem="ejQ-fJ-8qj" firstAttribute="leading" secondItem="8DW-ML-njO" secondAttribute="leading" constant="16" id="j7e-ei-frY"/>
+                                    <constraint firstItem="O5b-An-nmc" firstAttribute="centerY" secondItem="8DW-ML-njO" secondAttribute="centerY" id="pX0-eb-vMy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8DW-ML-njO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1vv-i7-Xyy"/>
+                            <constraint firstItem="8DW-ML-njO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nvz-Xc-tWx"/>
+                            <constraint firstItem="8DW-ML-njO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aW6-8g-6ga"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="busSearchBar" destination="O5b-An-nmc" id="sEb-ds-JTC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="94.581280788177338"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="threeLine" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
