@@ -17,6 +17,12 @@
 		084702F6288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
 		084702F7288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
 		084702F8288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
+		084702FA288AE975009ED4C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F9288AE975009ED4C2 /* Model.swift */; };
+		084702FB288AE975009ED4C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F9288AE975009ED4C2 /* Model.swift */; };
+		084702FC288AE975009ED4C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F9288AE975009ED4C2 /* Model.swift */; };
+		084702FE288AEA1A009ED4C2 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702FD288AEA1A009ED4C2 /* StationViewModel.swift */; };
+		084702FF288AEA1A009ED4C2 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702FD288AEA1A009ED4C2 /* StationViewModel.swift */; };
+		08470300288AEA1A009ED4C2 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702FD288AEA1A009ED4C2 /* StationViewModel.swift */; };
 		096CDC05288A70C3009273CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDC04288A70C3009273CE /* AppDelegate.swift */; };
 		096CDC07288A70C3009273CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDC06288A70C3009273CE /* SceneDelegate.swift */; };
 		096CDC0E288A70C4009273CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096CDC0D288A70C4009273CE /* Assets.xcassets */; };
@@ -71,6 +77,8 @@
 		084702EC288AE0B4009ED4C2 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		084702F1288AE1CF009ED4C2 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		084702F2288AE1CF009ED4C2 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		084702F9288AE975009ED4C2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		084702FD288AEA1A009ED4C2 /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		096CDC01288A70C3009273CE /* FlexBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096CDC04288A70C3009273CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096CDC06288A70C3009273CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 		084702E8288ADFBA009ED4C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				084702FD288AEA1A009ED4C2 /* StationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 		084702E9288ADFC4009ED4C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				084702F9288AE975009ED4C2 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -666,7 +676,9 @@
 				096CDC45288A722F009273CE /* BusLineCell.swift in Sources */,
 				096CDC63288A723C009273CE /* SearchView.swift in Sources */,
 				096CDC5E288A723C009273CE /* String+Extension.swift in Sources */,
+				084702FE288AEA1A009ED4C2 /* StationViewModel.swift in Sources */,
 				096CDC69288A72E7009273CE /* Apis.swift in Sources */,
+				084702FA288AE975009ED4C2 /* Model.swift in Sources */,
 				096CDC43288A722F009273CE /* BusAllStationModel.swift in Sources */,
 				096CDC62288A723C009273CE /* busRouteModel.swift in Sources */,
 			);
@@ -676,9 +688,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084702FF288AEA1A009ED4C2 /* StationViewModel.swift in Sources */,
 				096CDC1C288A70C4009273CE /* FlexBusTests.swift in Sources */,
 				084702EE288AE0B4009ED4C2 /* StationView.swift in Sources */,
 				084702F4288AE1CF009ED4C2 /* StationCell.swift in Sources */,
+				084702FB288AE975009ED4C2 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,8 +700,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084702FC288AE975009ED4C2 /* Model.swift in Sources */,
 				096CDC28288A70C4009273CE /* FlexBusUITestsLaunchTests.swift in Sources */,
 				084702EF288AE0B4009ED4C2 /* StationView.swift in Sources */,
+				08470300288AEA1A009ED4C2 /* StationViewModel.swift in Sources */,
 				084702F5288AE1CF009ED4C2 /* StationCell.swift in Sources */,
 				096CDC26288A70C4009273CE /* FlexBusUITests.swift in Sources */,
 			);

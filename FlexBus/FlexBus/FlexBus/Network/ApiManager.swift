@@ -54,4 +54,27 @@ class ApiManager {
                 return Disposables.create()
         }
     }
+    
+    
+    //MARK: StationInfo
+    static func getStationInfo(url: String, param: [String: Any]) -> Observable<Result<StationModel, Error>> {
+        
+        let header: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
+        
+        return Observable.create { observer -> Disposable in
+            
+            AF.request(url, method: .get, parameters: param, encoding: URLEncoding.default, headers: header)
+                .responseDecodable(of: StationModel.self) { response in
+                    switch response.result {
+                    case .success(let data):
+                        observer.onNext(.success(data))
+                    case .failure(let error):
+                        observer.onError(error)
+                    }
+                }
+                return Disposables.create()
+        }
+    }
 }

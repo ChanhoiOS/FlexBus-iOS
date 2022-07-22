@@ -13,11 +13,15 @@ import RxCocoa
 class StationView: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var stationViewModel = StationViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerHeader()
         registerCell()
+        initRx()
     }
     
     func registerHeader() {
@@ -65,6 +69,10 @@ class StationView: BaseViewController {
         tableView.register(nibName, forCellReuseIdentifier: "StationCell")
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func initRx() {
+        stationViewModel.input.stationId.onNext("112000086")
     }
 
 }

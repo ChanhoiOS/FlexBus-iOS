@@ -17,8 +17,6 @@ class BusInfoView: BaseViewController {
     @IBOutlet weak var line: UILabel!
     @IBOutlet weak var busNum: UILabel!
     
-    
-    
     var busInfoViewModel = BusInfoViewModel()
     var busStationData: BusAllStationModel?
     var disposeBag = DisposeBag()
@@ -216,7 +214,7 @@ extension BusInfoView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Station", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "StationView") as! StationView
-        print("stID: ",busStationData?.msgBody.itemList[indexPath.row]["stId"])
+        print("stID: ",busStationData?.msgBody.itemList[indexPath.row])
         
         navigationController?.pushViewController(vc, animated: true)
         
