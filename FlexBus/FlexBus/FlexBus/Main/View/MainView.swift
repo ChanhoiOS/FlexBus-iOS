@@ -19,6 +19,7 @@ class MainView: UIViewController {
         super.viewDidLoad()
         
         manageTextField()
+        print("push")
     }
     
     func initRx() {
