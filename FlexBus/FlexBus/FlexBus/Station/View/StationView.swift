@@ -1,8 +1,8 @@
 //
-//  BusInfoView.swift
-//  BestBus
+//  StationView.swift
+//  FlexBus
 //
-//  Created by 이찬호 on 2022/07/15.
+//  Created by 이찬호 on 2022/07/22.
 //
 
 import UIKit
@@ -10,47 +10,14 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class BusInfoView: BaseViewController {
+class StationView: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var line: UILabel!
-    @IBOutlet weak var busNum: UILabel!
-    
-    
-    
-    var busInfoViewModel = BusInfoViewModel()
-    var busStationData: BusAllStationModel?
-    var disposeBag = DisposeBag()
-    var firstStation: String?
-    var endStation: String?
-    var busId = ""
-    var lineText = ""
-    var busNumber = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initView()
-        registerCell()
         registerHeader()
-        initRx()
-    }
-    
-    func initView() {
-        backBtn.setTitle("", for: .normal)
-        line.text = lineText
-        if busNumber == "3" {
-            busNum.text = "간선"
-        }
-        
-    }
-    
-    func registerCell() {
-        let nibName = UINib(nibName: "BusLineCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "BusLineCell")
-        tableView.delegate = self
-        tableView.dataSource = self
+        registerCell()
     }
     
     func registerHeader() {
@@ -70,7 +37,7 @@ class BusInfoView: BaseViewController {
         }
         
         let firstLabel = UILabel(frame: CGRect(x: 100, y: 100, width: 80, height: 40))
-        firstLabel.text = firstStation
+        firstLabel.text = "a"
         firstLabel.textAlignment = .center
         header.addSubview(firstLabel)
         
@@ -81,7 +48,7 @@ class BusInfoView: BaseViewController {
         }
         
         let endLabel = UILabel(frame: CGRect(x: 100, y: 100, width: 80, height: 40))
-        endLabel.text = endStation
+        endLabel.text = "b"
         endLabel.textAlignment = .center
         header.addSubview(endLabel)
         
@@ -93,27 +60,16 @@ class BusInfoView: BaseViewController {
         tableView.tableHeaderView = header
     }
     
-    func initRx() {
-        backBtn.rx.tap
-            .bind(onNext: {[weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
-            })
-            .disposed(by: disposeBag)
-        
-        busInfoViewModel.input.busRouteId.onNext(busId)
-        
-        busInfoViewModel.output.station
-            .subscribe(onNext: { [weak self] response in
-                self?.busStationData = response
-                self?.tableView.reloadData()
-            }, onError: { error in
-                print("error: ",error)
-            })
-            .disposed(by: disposeBag)
+    func registerCell() {
+        let nibName = UINib(nibName: "StationCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "StationCell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+
 }
 
-extension BusInfoView: UITableViewDelegate, UITableViewDataSource {
+extension StationView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100))
@@ -148,7 +104,7 @@ extension BusInfoView: UITableViewDelegate, UITableViewDataSource {
         
         let firstStaionLabel = UILabel()
         firstStaionLabel.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-        firstStaionLabel.text = firstStation
+        firstStaionLabel.text = "c"
         firstStaionLabel.font = .systemFont(ofSize: 16)
         firstStaionLabel.textColor = .black
             
@@ -162,7 +118,7 @@ extension BusInfoView: UITableViewDelegate, UITableViewDataSource {
         
         let endStationLabel = UILabel()
         endStationLabel.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-        endStationLabel.text = endStation
+        endStationLabel.text = "d"
         endStationLabel.font = .systemFont(ofSize: 16)
         endStationLabel.textColor = .black
             
@@ -190,35 +146,26 @@ extension BusInfoView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return firstStation
+        return "e"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return busStationData?.msgBody.itemList.count ?? 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BusLineCell", for:  indexPath) as! BusLineCell
-        let stationNm = busStationData?.msgBody.itemList[indexPath.row]["stNm"]
-        let stationNum = busStationData?.msgBody.itemList[indexPath.row]["arsId"]
-        let busLoc = busStationData?.msgBody.itemList[indexPath.row]["arrmsg1"]
-        cell.stationName.text = stationNm ?? ""
-        cell.stationNum.text = stationNum ?? ""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for:  indexPath) as! StationCell
+//        let stationNm = busStationData?.msgBody.itemList[indexPath.row]["stNm"]
+//        let stationNum = busStationData?.msgBody.itemList[indexPath.row]["arsId"]
+//        let busLoc = busStationData?.msgBody.itemList[indexPath.row]["arrmsg1"]
+//        cell.stationName.text = stationNm ?? ""
+//        cell.stationNum.text = stationNum ?? ""
         
-        if busLoc == "곧 도착" {
-            cell.busImage.isHidden = false
-        } else {
-            cell.busImage.isHidden = true
-        }
+//        if busLoc == "곧 도착" {
+//            cell.busImage.isHidden = false
+//        } else {
+//            cell.busImage.isHidden = true
+//        }
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Station", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StationView") as! StationView
-        print("stID: ",busStationData?.msgBody.itemList[indexPath.row]["stId"])
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
     }
 }

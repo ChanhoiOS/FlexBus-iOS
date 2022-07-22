@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084702EB288AE071009ED4C2 /* Station.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084702EA288AE071009ED4C2 /* Station.storyboard */; };
+		084702ED288AE0B4009ED4C2 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702EC288AE0B4009ED4C2 /* StationView.swift */; };
+		084702EE288AE0B4009ED4C2 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702EC288AE0B4009ED4C2 /* StationView.swift */; };
+		084702EF288AE0B4009ED4C2 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702EC288AE0B4009ED4C2 /* StationView.swift */; };
+		084702F3288AE1CF009ED4C2 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F1288AE1CF009ED4C2 /* StationCell.swift */; };
+		084702F4288AE1CF009ED4C2 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F1288AE1CF009ED4C2 /* StationCell.swift */; };
+		084702F5288AE1CF009ED4C2 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084702F1288AE1CF009ED4C2 /* StationCell.swift */; };
+		084702F6288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
+		084702F7288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
+		084702F8288AE1CF009ED4C2 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084702F2288AE1CF009ED4C2 /* StationCell.xib */; };
 		096CDC05288A70C3009273CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDC04288A70C3009273CE /* AppDelegate.swift */; };
 		096CDC07288A70C3009273CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096CDC06288A70C3009273CE /* SceneDelegate.swift */; };
 		096CDC0E288A70C4009273CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096CDC0D288A70C4009273CE /* Assets.xcassets */; };
@@ -57,6 +67,10 @@
 
 /* Begin PBXFileReference section */
 		058F12EC66EDC476E864F6FE /* Pods-FlexBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBus.debug.xcconfig"; path = "Target Support Files/Pods-FlexBus/Pods-FlexBus.debug.xcconfig"; sourceTree = "<group>"; };
+		084702EA288AE071009ED4C2 /* Station.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Station.storyboard; sourceTree = "<group>"; };
+		084702EC288AE0B4009ED4C2 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		084702F1288AE1CF009ED4C2 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		084702F2288AE1CF009ED4C2 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		096CDC01288A70C3009273CE /* FlexBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096CDC04288A70C3009273CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096CDC06288A70C3009273CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +139,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		084702E6288ADF98009ED4C2 /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				084702E9288ADFC4009ED4C2 /* Model */,
+				084702E8288ADFBA009ED4C2 /* ViewModel */,
+				084702E7288ADFB3009ED4C2 /* View */,
+				084702EA288AE071009ED4C2 /* Station.storyboard */,
+			);
+			path = Station;
+			sourceTree = "<group>";
+		};
+		084702E7288ADFB3009ED4C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				084702F0288AE18A009ED4C2 /* Cell */,
+				084702EC288AE0B4009ED4C2 /* StationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		084702E8288ADFBA009ED4C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		084702E9288ADFC4009ED4C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		084702F0288AE18A009ED4C2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				084702F1288AE1CF009ED4C2 /* StationCell.swift */,
+				084702F2288AE1CF009ED4C2 /* StationCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		096CDBF8288A70C3009273CE = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +207,14 @@
 		096CDC03288A70C3009273CE /* FlexBus */ = {
 			isa = PBXGroup;
 			children = (
+				096CDC34288A7225009273CE /* Base */,
 				096CDC66288A72E7009273CE /* Network */,
 				096CDC4F288A723C009273CE /* Common */,
 				096CDC4D288A723C009273CE /* Extension */,
 				096CDC48288A723C009273CE /* Main */,
 				096CDC51288A723C009273CE /* Search */,
 				096CDC37288A722F009273CE /* BusInfo */,
-				096CDC34288A7225009273CE /* Base */,
+				084702E6288ADF98009ED4C2 /* Station */,
 				096CDC04288A70C3009273CE /* AppDelegate.swift */,
 				096CDC06288A70C3009273CE /* SceneDelegate.swift */,
 				096CDC0D288A70C4009273CE /* Assets.xcassets */,
@@ -455,9 +513,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084702F6288AE1CF009ED4C2 /* StationCell.xib in Resources */,
 				096CDC11288A70C4009273CE /* LaunchScreen.storyboard in Resources */,
 				096CDC64288A723C009273CE /* SearchTableViewCell.xib in Resources */,
 				096CDC47288A722F009273CE /* BusInfo.storyboard in Resources */,
+				084702EB288AE071009ED4C2 /* Station.storyboard in Resources */,
 				096CDC0E288A70C4009273CE /* Assets.xcassets in Resources */,
 				096CDC5C288A723C009273CE /* Main.storyboard in Resources */,
 				096CDC61288A723C009273CE /* Search.storyboard in Resources */,
@@ -469,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084702F7288AE1CF009ED4C2 /* StationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084702F8288AE1CF009ED4C2 /* StationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +658,8 @@
 				096CDC44288A722F009273CE /* BusInfoView.swift in Sources */,
 				096CDC05288A70C3009273CE /* AppDelegate.swift in Sources */,
 				096CDC60288A723C009273CE /* SearchViewModel.swift in Sources */,
+				084702ED288AE0B4009ED4C2 /* StationView.swift in Sources */,
+				084702F3288AE1CF009ED4C2 /* StationCell.swift in Sources */,
 				096CDC42288A722F009273CE /* BusInfoViewModel.swift in Sources */,
 				096CDC07288A70C3009273CE /* SceneDelegate.swift in Sources */,
 				096CDC65288A723C009273CE /* SearchTableViewCell.swift in Sources */,
@@ -613,6 +677,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				096CDC1C288A70C4009273CE /* FlexBusTests.swift in Sources */,
+				084702EE288AE0B4009ED4C2 /* StationView.swift in Sources */,
+				084702F4288AE1CF009ED4C2 /* StationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +687,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				096CDC28288A70C4009273CE /* FlexBusUITestsLaunchTests.swift in Sources */,
+				084702EF288AE0B4009ED4C2 /* StationView.swift in Sources */,
+				084702F5288AE1CF009ED4C2 /* StationCell.swift in Sources */,
 				096CDC26288A70C4009273CE /* FlexBusUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
